@@ -326,11 +326,12 @@
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contact">
         <div class="my-auto">
             <h2 class="mb-0">Contact Me</h2>
-            <form action="" method="post">
+            <!--Fancy Form--
+            <form action="mailto:jmtimper@ncsu.edu" method="post" enctype="text/plain">
                 <div class="form-group row">
                     <label for="inputName" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
-                        <input required="true" type="name" class="form-control" id="inputName" placeholder="Name">
+                        <input required="true" type="text" class="form-control" id="inputName" placeholder="Name">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -341,9 +342,22 @@
                 </div>
                 <div class="form-group row">
                         <label for="message">Message</label>
-                        <textarea required="true" class="form-control" id="message" rows="3"></textarea>
+                        <textarea required="true" type="text" class="form-control" id="message" rows="3"></textarea>
                 </div>
                 <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+
+            <!--Ugly working Form-->
+            <form action="mailto:jmtimper@ncsu.edu" method="post" enctype="text/plain">
+                Name:<br>
+                <input type="text" name="name" class="col-sm-2 col-form-label" placeholder="Full Name"><br>
+                E-mail:<br>
+                <input type="text" name="mail" class="col-sm-2 col-form-label" placeholder="Email"><br>
+                Comment:<br>
+                <input type="textarea" required="true" class="form-control" rows="3" name="comment" size="50" placeholder="Message...">
+                <br><br>
+                <input type="submit" value="Send">
                 <input type="reset" value="Reset">
             </form>
         </div>
